@@ -1,27 +1,47 @@
-<html>
+<Doctype html>
 <head>
 <title>Animation</title>
 <style>
+
 body{
+	background-image:url("bg.jpg");
 	background-repeat:no-repeat;
 	background-size:100% 100%;
 	background-attachment:fixed;
 
 }
+@keyframes move {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(200px); }
+      100% { transform: translateX(100%); }
+    }
+	@keyframes move2 {
+      0% { transform: translateX(100%); }
+	}
+.marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      animation: move 5s linear infinite;
+    }
+	.marquee2 {
+      white-space: nowrap;
+      overflow: hidden;
+      animation: move2 5s linear infinite;
+    }
 </style>
 </head>
-<body background ="C:\Users\user\Desktop\Pro\pro2/bg.jpg">
+<body>
 
-<marquee scrollamount="28">
-<img src="C:\Users\user\Desktop\Pro\pro2/birds.gif" width="22%" />
-</marquee>
+<div class="marquee2" >
+<img src="birds.gif" width="22%" alt="birds"/>
+</div>
 <br><br><br><br><br><br>
-<marquee direction="right" scrollamount="68">
-<img src="C:\Users\user\Desktop\Pro\pro2/1.gif" width="22%" />
-<img src="C:\Users\user\Desktop\Pro\pro2/2.gif" width="16%" />
-<img src="C:\Users\user\Desktop\Pro\pro2/3.gif" width="15%" />
-<img src="C:\Users\user\Desktop\Pro\pro2/4.gif" width="30%" />&emsp;
-</marquee>
+<div class="marquee" direction="right" scrollamount="68">
+<img src="1.gif" width="22%" alt="cycle"/>
+<img src="2.gif" width="16%" alt="cycle" />
+<img src="3.gif" width="15%" alt="cycle"/>
+<img src="4.gif" width="30%" alt="cycle"/>
+</div>
 
 </body>
 </html>
